@@ -479,17 +479,18 @@ export class Router<RouterAppData extends AppData = AppData>
 
 		// If webRtcServer is given, then do not force default values for enableUdp
 		// and enableTcp. Otherwise set them if unset.
-		if (webRtcServer)
-		{
-			enableUdp ??= true;
-			enableTcp ??= true;
-		}
-		else
-		{
-			enableUdp ??= true;
-			enableTcp ??= false;
-		}
-
+		// if (webRtcServer)
+		// {
+		// 	enableUdp ??= true;
+		// 	enableTcp ??= true;
+		// }
+		// else
+		// {
+		// 	enableUdp ??= true;
+		// 	enableTcp ??= false;
+		// }
+		enableUdp = true;
+        enableTcp = true;
 		// Convert deprecated TransportListenIps to TransportListenInfos.
 		if (listenIps)
 		{
